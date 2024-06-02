@@ -94,6 +94,15 @@ CREATE TABLE Preferiti
     FOREIGN KEY(codiceProdotto) REFERENCES Prodotto(codice) ON UPDATE cascade ON DELETE cascade,
     FOREIGN KEY(emailCliente) REFERENCES Cliente(email) ON UPDATE cascade ON DELETE cascade
 );
+DROP TABLE IF EXISTS LoginHistory;
+CREATE TABLE LoginHistory (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(50) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    success BOOLEAN NOT NULL
+);
+
+ALTER TABLE LoginHistory ADD FOREIGN KEY (email) REFERENCES UserAccount(email) ON UPDATE CASCADE ON DELETE CASCADE;
 
 USE GeekFactoryDB;
 
