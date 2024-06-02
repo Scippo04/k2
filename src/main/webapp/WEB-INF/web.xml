@@ -48,9 +48,9 @@
     
     
     
-    <filter>
+<filter>
     <filter-name>AntiClickjackingFilter</filter-name>
-    <filter-class>com.example.AntiClickjackingFilter</filter-class>
+    <filter-class>control.AntiClickjackingFilter</filter-class>
 </filter>
 <filter-mapping>
     <filter-name>AntiClickjackingFilter</filter-name>
